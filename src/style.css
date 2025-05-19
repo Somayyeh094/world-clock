@@ -1,7 +1,21 @@
 body {
-  background: rgb(203, 202, 202);
-  text-align: center;
+  background-image: url("/image/gravity.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-footer {
-  text-align: center;
+.container-fluid {
+  background-color: white;
+  width: 1000px;
+  height: 650px;
+  margin: 50px auto;
+}
+.current-page{
+  color:#1841CB;
+}
+.search-input{
+  width: 40%;
+}
+.btn{
+  width: 15%;
 }
