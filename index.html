@@ -36,11 +36,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item ">
-              <a class="nav-link current-page fw-bold" href="index.html">Time zone</a>
+            <li class="nav-item">
+              <a class="nav-link current-page fw-bold" href="index.html"
+                >Time zone</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="city-time.html">Find current time in any city</a>
+              <a class="nav-link" href="city-time.html"
+                >Find current time in any city</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="time-difference.html"
@@ -56,15 +60,12 @@
           <label for="timezone-search" class="fst-italic fs-5"
             >Select Timezone to find time:</label
           >
-          <input
-            type="text"
-            name=""
-            id="timezone-search"
-            list="time-zones"
-            placeholder="Please select timezone"
+          <select
+            id="time-zones"
             class="text-center fst-italic rounded-2 border border-secondary bg-light"
-          />
-          <datalist id="time-zones">
+          >
+            <option value="">Please select timezone</option>
+            <option value="Current Location">Current Location</option>
             <option value="Africa/Abidjan">Africa/Abidjan</option>
             <option value="Africa/Accra">Africa/Accra</option>
             <option value="Africa/Addis_Ababa">Africa/Addis_Ababa</option>
@@ -712,9 +713,24 @@
             <option value="Universal">Universal</option>
             <option value="W-SU">W-SU</option>
             <option value="WET">WET</option>
-          </datalist>
+          </select>
         </form>
       </div>
+      <div class="display-time">
+        <div class="zone mt-5 border border-secondary pt-4 bg-light rounded-3">
+          <div class="zone-name">
+            <h2 id="zoneName"></h2>
+            <p id="zoneDate" class=""></p>
+          </div>
+          <div class="time">
+            <h1>
+              <span class="fw-bold" id="zoneTime"> </span
+              ><span class="fs-3 align-top" id="amPm"></span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="world-map"></div>
     </div>
     <footer class="text-center text-white bg-dark p-2">
       This project was coded by
@@ -724,7 +740,12 @@
         class="text-white"
         >Somayyeh Seyedi</a
       >, and is open-sourced on
-      <a href="https://github.com/Somayyeh094/world-clock" target="_blank" class="text-white">GitHub</a>, hosted on
+      <a
+        href="https://github.com/Somayyeh094/world-clock"
+        target="_blank"
+        class="text-white"
+        >GitHub</a
+      >, hosted on
       <a
         href="https://worldclock-timezone.netlify.app/"
         target="_blank"

@@ -19,3 +19,14 @@ body {
 .btn{
   width: 15%;
 }
+.hidden{
+  display: none;
+}
+.world-map{
+  background-image: url("/image/Worldmap.svg");
+}
+/* index.html */
+.zone{
+  display: flex;
+  justify-content: space-around;
+}
