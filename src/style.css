@@ -10,23 +10,25 @@ body {
   height: 650px;
   margin: 50px auto;
 }
-.current-page{
-  color:#1841CB;
+.current-page {
+  color: #1841cb;
 }
-.search-input{
+.search-input {
   width: 40%;
 }
-.btn{
+.btn {
   width: 15%;
 }
-.hidden{
-  display: none;
-}
-.world-map{
-  background-image: url("/image/Worldmap.svg");
-}
+
+
 /* index.html */
-.zone{
-  display: flex;
-  justify-content: space-around;
+.display-time {
+  height: 450px;
+  background-image: url("/image/Worldmap.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+  padding-top: 70px;
 }
+

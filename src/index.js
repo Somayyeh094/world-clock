@@ -1,19 +1,27 @@
 //index.html
 
 function showTime() {
-
   let nameTimeZone = zoneSelect.value;
   if (nameTimeZone === "Current Location") {
     nameTimeZone = moment.tz.guess();
   }
-  let zoneName = document.querySelector("#zoneName");
-  let zoneDate = document.querySelector("#zoneDate");
-  let zoneTime = document.querySelector("#zoneTime");
-  let amPm = document.querySelector("#amPm");
-  zoneName.innerHTML = nameTimeZone;
-  zoneDate.innerHTML = moment().tz(nameTimeZone).format("MMMM Do, YYYY");
-  zoneTime.innerHTML = moment().tz(nameTimeZone).format("hh:mm:ss");
-  amPm.innerHTML = moment().tz(nameTimeZone).format("A");
+  let zone = document.querySelector("#displayTime");
+  zone.innerHTML = `<div
+          class="row border border-secondary pt-4 rounded-3 m-3" style="background-color: #d5e9f7"
+        ><div class="col-6 text-center ">
+            <h2>${nameTimeZone}</h2>
+            <p> ${moment().tz(nameTimeZone).format("MMMM Do, YYYY")}</p>
+          </div>
+          <div class=" col-6 text-center time">
+            <h1>
+              <span class="fw-bold" > ${moment()
+                .tz(nameTimeZone)
+                .format("hh:mm:ss")}</span
+              ><span class="fs-3 align-top" >${moment()
+                .tz(nameTimeZone)
+                .format("A")}</span>
+            </h1>
+          </div></div>`;
 }
 setInterval(showTime, 1000);
 let zoneSelect = document.querySelector("#time-zones");
