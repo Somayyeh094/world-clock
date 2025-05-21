@@ -21,8 +21,7 @@ body {
 }
 
 
-/* index.html */
-.display-time {
+.display {
   height: 450px;
   background-image: url("/image/Worldmap.svg");
   background-repeat: no-repeat;

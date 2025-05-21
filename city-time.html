@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>Find time & date in specific city</title>
   </head>
   <body>
@@ -51,11 +51,17 @@
           </ul>
         </div>
       </nav>
+      <div class="enter-city">
       <h1 class="p-2 text-center">Current time around the world</h1>
-      <form action="" class="p-2 text-center">
-        <input type="search" name="" id="" value="Please enter a city..." class="search-input rounded-2 border border-secondary fst-italic text-black-50 text-center p-1 pb-2 bg-light" >
+      <form action="" class="p-2 text-center" id="formSubmit">
+        <input type="search" name="" id="input-search" placeholder="Please enter a city..." class="search-input rounded-2 border border-secondary fst-italic text-black-50 text-center p-1 pb-2 bg-light" required autocomplete="off" >
         <input type="submit" value="Search" class=" btn btn-primaryrounded-2 bg-primary text-white border-0 ">
     </form>
+    </div>
+    <div class="display mt-4" id="display">
+        
+    </div>
+    
     </div>
 
     <footer class="text-center text-white bg-dark p-2">
@@ -74,6 +80,6 @@
         >Netlifiy</a
       >
     </footer>
-    <script src="src/index.js"></script>
+    <script src="src/city-time.js"></script>
   </body>
 </html>

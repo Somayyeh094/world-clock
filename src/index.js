@@ -5,7 +5,7 @@ function showTime() {
   if (nameTimeZone === "Current Location") {
     nameTimeZone = moment.tz.guess();
   }
-  let zone = document.querySelector("#displayTime");
+  let zone = document.querySelector("#display");
   zone.innerHTML = `<div
           class="row border border-secondary pt-4 rounded-3 m-3" style="background-color: #d5e9f7"
         ><div class="col-6 text-center ">
@@ -27,3 +27,5 @@ setInterval(showTime, 1000);
 let zoneSelect = document.querySelector("#time-zones");
 
 zoneSelect.addEventListener("change", showTime);
+
+
