@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,61 +11,101 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Time Difference</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-fluid rounded-4">
-        <nav
-          class="navbar navbar-expand-lg navbar-light"
-          style="background-color: #c6e1f4"
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: #c6e1f4"
+      >
+        <a class="navbar-brand" href="#"
+          ><img src="/image/mychosenlogo.svg" alt="my logo" width="60px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <a class="navbar-brand" href="#"><img src="/image/mychosenlogo.svg" alt="my logo"  width="60px"></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav nav-fill w-100">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html"
-                  >Time zone</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="city-time.html">Find current time in any city</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link current-page fw-bold" href="time-difference.html">Time difference</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-    <h1 class="text-center p-2">Check the time difference</h1>
-    <h5 class="text-center">What is the difference in time</h3>
-        <form action="" class="text-center">
-            <label for="first-city">Between</label>
-            <input type="text" name="" id="first-city" placeholder="Please enter a city" class="fst-italic text-center rounded-2 border border-secondary bg-light p-1 pb-2">
-            <label for="second-city">And</label>
-            <input type="text" name="" id="second-city" placeholder="Please enter a city" class="fst-italic text-center rounded-2 border border-secondary bg-light p-1 pb-2">
-            
-            <input class="btn btn-primary" type="submit" value="Calculate" class="text-center pt-2 ">
-            
-        </form>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-fill w-100">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Time zone</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="city-time.html"
+                >Find current time in any city</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link current-page fw-bold"
+                href="time-difference.html"
+                >Time difference</a
+              >
+            </li>
+          </ul>
         </div>
-    <footer class="text-center text-white bg-dark p-2 ">
-        This project was coded by
-        <a href="https://somayyeh-portfolio.netlify.app/" target="_blank" class="text-white"
-          >Somayyeh Seyedi</a
-        >, and is open-sourced on <a href="https://github.com/Somayyeh094/world-clock" target="_blank" class="text-white">GitHub</a>, hosted on
-        <a href="https://worldclock-timezone.netlify.app/" target="_blank" class="text-white">Netlifiy</a>
-      </footer>
-      <script src="src/index.js"></script>
-</body>
+      </nav>
+      <div class="enter-cities">
+        <h3 class="text-center p-3">What is the difference in time</h3>
+        <form action="" class="text-center" id="formSubmit">
+          <label for="first-city">Between</label>
+          <input
+            type="search"
+            name=""
+            id="first-city"
+            placeholder="Please enter a city"
+            class="fst-italic text-center rounded-2 border border-secondary bg-light p-1 pb-2"
+          />
+          <label for="second-city">And</label>
+          <input
+            type="search"
+            name=""
+            id="second-city"
+            placeholder="Please enter a city"
+            class="fst-italic text-center rounded-2 border border-secondary bg-light p-1 pb-2"
+          />
+
+          <input
+            class="btn btn-primary"
+            type="submit"
+            value="Calculate"
+            class="text-center pt-2"
+          />
+        </form>
+      </div>
+      <div class="display mt-4" id="display"></div>
+    </div>
+    <footer class="text-center text-white bg-dark p-2">
+      This project was coded by
+      <a
+        href="https://somayyeh-portfolio.netlify.app/"
+        target="_blank"
+        class="text-white  f-link"
+        >Somayyeh Seyedi</a
+      >, and is open-sourced on
+      <a
+        href="https://github.com/Somayyeh094/world-clock"
+        target="_blank"
+        class="text-white f-link"
+        >GitHub</a
+      >, hosted on
+      <a
+        href="https://worldclock-timezone.netlify.app/"
+        target="_blank"
+        class="text-white f-link"
+        >Netlifiy</a
+      >
+    </footer>
+    <script src="src/time-difference.js"></script>
+  </body>
 </html>

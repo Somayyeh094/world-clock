@@ -1,6 +1,5 @@
 // A bit strange, I know! I couldn't find a free API that included both city and timezone. So...
 function showInfo() {
-  console.log(timeZone);
   let zone = document.querySelector("#display");
   zone.innerHTML = `<div
           class="row show-info border border-secondary pt-5 rounded-3 m-3" style="background-color: #d5e9f7"
@@ -18,7 +17,7 @@ function showInfo() {
                 .tz(timeZone)
                 .format("A")}</span>
             </h1>
-<p> ${moment().tz(timeZone).format("MMMM Do, YYYY")}</p>;
+<p> ${moment().tz(timeZone).format("MMMM Do, YYYY")}</p>
           </div></div>`;
 }
 setInterval(showInfo, 1000);
@@ -34,6 +33,7 @@ function callTimeApi(response) {
     let latitude = response.data.coordinates.latitude;
     let longitude = response.data.coordinates.longitude;
     country = response.data.country;
+  
     let apiUrl = `https://timeapi.io/api/time/current/coordinate?latitude=${latitude}&longitude=${longitude}`;
     axios.get(apiUrl).then(findTimeZone);
   }
