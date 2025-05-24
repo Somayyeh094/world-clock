@@ -10,7 +10,7 @@ function showInfo() {
     parseInt(moment().tz(timeZoneSecondCity).format("m")); //in minutes
   let timeDifference = (secondtCityTime - firstCityTime) / 60; //in hours
 
-  if (timeDifference > 20) {
+  if (timeDifference > 15) {
     timeDifference = 24 - timeDifference;
     text = "behind";
   }
