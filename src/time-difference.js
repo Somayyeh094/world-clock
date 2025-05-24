@@ -9,6 +9,7 @@ function showInfo() {
     parseInt(moment().tz(timeZoneSecondCity).format("H") * 60) +
     parseInt(moment().tz(timeZoneSecondCity).format("m")); //in minutes
   let timeDifference = (secondtCityTime - firstCityTime) / 60; //in hours
+  console.log(timeDifference);
   if (timeDifference < 0) {
     if (Math.abs(timeDifference >= 15)) {
       text = "ahead";
