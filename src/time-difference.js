@@ -1,5 +1,4 @@
 function showInfo() {
-  let zone = document.querySelector("#display");
   let text = "";
 
   const firstCityTime =
@@ -11,13 +10,13 @@ function showInfo() {
   let timeDifference = (secondtCityTime - firstCityTime) / 60; //in hours
   console.log(timeDifference);
   if (timeDifference < 0) {
-    if (timeDifference <= -15) {
+    if (timeDifference <= -12) {
       text = "ahead";
     } else {
       text = "behind";
     }
   } else {
-    if (timeDifference >= 15) {
+    if (timeDifference >= 12) {
       text = "behind";
     } else {
       text = "ahead";
@@ -95,6 +94,7 @@ function timeSecondCity(response) {
 
 function callWeatherApi(event) {
   event.preventDefault();
+  zone.innerHTML = "";
   firstCity = document.querySelector("#first-city").value;
   secondCity = document.querySelector("#second-city").value;
   let apiKey = "71c9o8ef0370bd39a326b41301fb04bt";
@@ -110,5 +110,6 @@ var timeZoneFirstCity = "";
 var secondCity = "";
 var countrySecondCity = "";
 var timeZoneSecondCity = "";
+var zone = document.querySelector("#display");
 let formSubmit = document.querySelector("#formSubmit");
 formSubmit.addEventListener("submit", callWeatherApi);
