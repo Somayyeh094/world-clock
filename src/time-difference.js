@@ -9,17 +9,22 @@ function showInfo() {
     parseInt(moment().tz(timeZoneSecondCity).format("H") * 60) +
     parseInt(moment().tz(timeZoneSecondCity).format("m")); //in minutes
   let timeDifference = (secondtCityTime - firstCityTime) / 60; //in hours
-  console.log(timeDifference);
-
   if (timeDifference < 0) {
-    text = "behind";
+    if (Math.abs(timeDifference >= 15)) {
+      text = "ahead";
+    } else {
+      text = "behind";
+    }
   } else {
-    if (Math.abs(timeDifference) >= 15) {
-      timeDifference = 24 - Math.abs(timeDifference);
+    if (timeDifference >= 15) {
       text = "behind";
     } else {
       text = "ahead";
     }
+  }
+
+  if (Math.abs(timeDifference) >= 15) {
+    timeDifference = 24 - Math.abs(timeDifference);
   }
   let hoursDiff = Math.floor(Math.abs(timeDifference)); //hours difference
 
