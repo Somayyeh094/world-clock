@@ -27,8 +27,8 @@ function showInfo() {
   if (minutesDiff < 10) {
     minutesDiff = `0${minutesDiff}`;
   }
-}
-zone.innerHTML = `<div
+
+  zone.innerHTML = `<div
             class="row show-info border border-secondary rounded-3 m-3" style="background-color: #d5e9f7"
           ><div class="col-6 text-center pt-2 border-dark border-end">
               <h4 class="fst-italic"> ${firstCity}<small>(${countryFirstCity})</small><br/></h4>
@@ -59,6 +59,7 @@ zone.innerHTML = `<div
  
             </div> 
             </div>`;
+}
 
 setInterval(showInfo, 1000);
 function findTimeZoneFirstCity(response) {
