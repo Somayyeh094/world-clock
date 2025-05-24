@@ -11,7 +11,7 @@ function showInfo() {
   let timeDifference = (secondtCityTime - firstCityTime) / 60; //in hours
   console.log(timeDifference);
   if (timeDifference < 0) {
-    if (Math.abs(timeDifference >= 15)) {
+    if (timeDifference <= -15) {
       text = "ahead";
     } else {
       text = "behind";
