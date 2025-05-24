@@ -9,24 +9,24 @@ function showInfo() {
     parseInt(moment().tz(timeZoneSecondCity).format("H") * 60) +
     parseInt(moment().tz(timeZoneSecondCity).format("m")); //in minutes
   let timeDifference = (secondtCityTime - firstCityTime) / 60; //in hours
-
-  if (timeDifference > 15) {
-    timeDifference = 24 - timeDifference;
-    text = "behind";
-  }
-
+  
   let hoursDiff = Math.floor(Math.abs(timeDifference)); //hours difference
   console.log(hoursDiff);
   let minutesDiff = (Math.abs(timeDifference) - hoursDiff) * 60; //minutes difference
   if (minutesDiff < 10) {
     minutesDiff = `0${minutesDiff}`;
   }
-  if (timeDifference < 0) {
-    text = "behind";
-  } else {
-    text = "ahead";
-  }
-
+  
+    if (timeDifference >= 15) {
+      timeDifference = 24 - timeDifference;
+      text = "behind";
+    }else{
+      if (0<timeDifference < 15) {
+        text = "ahead";
+      } else {
+        text = "behind";
+      }
+    }
   zone.innerHTML = `<div
             class="row show-info border border-secondary rounded-3 m-3" style="background-color: #d5e9f7"
           ><div class="col-6 text-center pt-2 border-dark border-end">
