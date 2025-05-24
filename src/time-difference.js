@@ -1,6 +1,6 @@
 function showInfo() {
   let text = "";
-
+  zone.innerHTML = "";
   const firstCityTime =
     parseInt(moment().tz(timeZoneFirstCity).format("H") * 60) +
     parseInt(moment().tz(timeZoneFirstCity).format("m")); //in minutes
@@ -94,9 +94,9 @@ function timeSecondCity(response) {
 
 function callWeatherApi(event) {
   event.preventDefault();
-  zone.innerHTML = "";
   firstCity = document.querySelector("#first-city").value;
   secondCity = document.querySelector("#second-city").value;
+  
   let apiKey = "71c9o8ef0370bd39a326b41301fb04bt";
   let apiUrlFirstCity = `https://api.shecodes.io/weather/v1/current?query=${firstCity}&key=${apiKey}`;
   let apiUrlSecondCity = `https://api.shecodes.io/weather/v1/current?query=${secondCity}&key=${apiKey}`;
