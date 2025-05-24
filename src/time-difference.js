@@ -14,8 +14,8 @@ function showInfo() {
   if (timeDifference < 0) {
     text = "behind";
   } else {
-    if (timeDifference >= 15) {
-      timeDifference = 24 - timeDifference;
+    if (Math.abs(timeDifference) >= 15) {
+      timeDifference = 24 - Math.abs(timeDifference);
       text = "behind";
     } else {
       text = "ahead";
