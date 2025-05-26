@@ -9,6 +9,11 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
@@ -16,12 +21,13 @@
     <title>Find time & date in specific city</title>
   </head>
   <body>
-    <div class="container-fluid rounded-4">
+    <div class="main-section rounded-4">
       <nav
-        class="navbar navbar-expand-lg navbar-light"
+        class="navbar navbar-expand-lg navbar-light rounded-top-4"
         style="background-color: #c6e1f4"
       >
-        <a class="navbar-brand" href="#"
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
           ><img src="/image/mychosenlogo.svg" alt="my logo" width="60px"
         /></a>
         <button
@@ -41,7 +47,9 @@
               <a class="nav-link" href="index.html">Time zone</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link current-page fw-bold" href="city-time.html">Find current time in any city</a>
+              <a class="nav-link active fw-bold" href="city-time.html"
+                >Find current time in any city</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="time-difference.html"
@@ -50,18 +58,28 @@
             </li>
           </ul>
         </div>
+      </div>
       </nav>
       <div class="enter-city">
-      <h1 class="p-2 text-center">Current time around the world</h1>
-      <form action="" class=" text-center" id="formSubmit">
-        <input type="search" name="" id="input-search" placeholder="Please enter a city..." class="search-input rounded-2 border border-secondary fst-italic text-black-50 text-center p-1 pb-2 bg-light" required autocomplete="off" >
-        <input type="submit" value="Search" class=" btn btn-primaryrounded-2 bg-primary text-white border-0 ">
-    </form>
-    </div>
-    <div class="display mt-4" id="display">
-        
-    </div>
-    
+        <h3 class="p-3 text-center">Current time around the world</h3>
+        <form action="" class="text-center" id="formSubmit">
+          <input
+            type="search"
+            name=""
+            id="input-search"
+            placeholder="Please enter a city..."
+            class="search-input rounded-2 border border-secondary fst-italic text-black-50 text-center p-1 pb-2 bg-light"
+            required
+            autocomplete="off"
+          />
+          <input
+            type="submit"
+            value="Search"
+            class="btn btn-primaryrounded-2 bg-primary text-white border-0"
+          />
+        </form>
+      </div>
+      <div class="display mt-4" id="display"></div>
     </div>
 
     <footer class="text-center text-white bg-dark p-2">
@@ -72,7 +90,12 @@
         class="text-white f-link"
         >Somayyeh Seyedi</a
       >, and is open-sourced on
-      <a href="https://github.com/Somayyeh094/world-clock" target="_blank" class="text-white f-link">GitHub</a>, hosted on
+      <a
+        href="https://github.com/Somayyeh094/world-clock"
+        target="_blank"
+        class="text-white f-link"
+        >GitHub</a
+      >, hosted on
       <a
         href="https://worldclock-timezone.netlify.app/"
         target="_blank"

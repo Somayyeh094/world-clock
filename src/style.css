@@ -4,15 +4,13 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-.container-fluid {
+.main-section {
   background-color: white;
   width: 1000px;
   height: 650px;
   margin: 50px auto;
 }
-.current-page {
-  color: #1841cb;
-}
+
 .search-input {
   width: 40%;
 }

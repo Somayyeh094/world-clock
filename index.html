@@ -9,49 +9,51 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>World Clock</title>
   </head>
   <body>
-    <div class="container-fluid rounded-4">
+    <div class="main-section rounded-4">
       <nav
-        class="navbar navbar-expand-lg navbar-light"
+        class="navbar navbar-expand-lg navbar-light rounded-top-4"
         style="background-color: #c6e1f4"
-      >
-        <a class="navbar-brand" href="#"
-          ><img src="/image/mychosenlogo.svg" alt="my logo" width="60px"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item">
-              <a class="nav-link current-page fw-bold" href="index.html"
-                >Time zone</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="city-time.html"
-                >Find current time in any city</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="time-difference.html"
-                >Time difference</a
-              >
-            </li>
-          </ul>
+      > <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img src="/image/mychosenlogo.svg" alt="my logo" width="60px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-fill w-100">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" href="index.html"
+                  >Time zone</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="city-time.html"
+                  >Find current time in any city</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="time-difference.html"
+                  >Time difference</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <h1 class="pt-3 pb-2 text-center">World Clock</h1>
@@ -716,9 +718,7 @@
           </select>
         </form>
       </div>
-      <div class="display mt-4" id="display">
-        
-      </div>
+      <div class="display mt-4" id="display"></div>
     </div>
     <footer class="text-center text-white bg-dark p-2">
       This project was coded by
