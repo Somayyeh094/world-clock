@@ -35,7 +35,7 @@ function showInfo() {
 
   zone.innerHTML = `<div
             class="row show-info border border-secondary rounded-3 m-3" style="background-color: #d5e9f7"
-          ><div class="col-6 text-center pt-2 border-dark border-end">
+          ><div class="col-md-6 text-center pt-2 border-dark border-end">
               <h4 class="fst-italic"> ${firstCity}<small>(${countryFirstCity})</small><br/></h4>
                 <span class=" fs-3 fw-bold" > ${moment()
                   .tz(timeZoneFirstCity)
@@ -46,7 +46,7 @@ function showInfo() {
               <p> ${moment().tz(timeZoneFirstCity).format("MMMM Do, YYYY")}</p>
 
             </div>
-            <div class=" col-6 text-center pt-2">
+            <div class=" col-md-6 text-center pt-2">
                <h4 class="fst-italic"> ${secondCity}<small>(${countrySecondCity})</small><br/></h4>
                 <span class=" fs-3 fw-bold" > ${moment()
                   .tz(timeZoneSecondCity)
@@ -58,7 +58,7 @@ function showInfo() {
 
  
             </div> 
-            <div class=" col-12 text-center pt-2 border-dark border-top">
+            <div class=" col-md-12 text-center pt-2 border-dark border-top">
                <h4 class="fw-bold">
                ${secondCity} is ${hoursDiff}:${minutesDiff} hours ${text} ${firstCity}</h4>
  
@@ -96,7 +96,7 @@ function callWeatherApi(event) {
   event.preventDefault();
   firstCity = document.querySelector("#first-city").value;
   secondCity = document.querySelector("#second-city").value;
-  
+
   let apiKey = "71c9o8ef0370bd39a326b41301fb04bt";
   let apiUrlFirstCity = `https://api.shecodes.io/weather/v1/current?query=${firstCity}&key=${apiKey}`;
   let apiUrlSecondCity = `https://api.shecodes.io/weather/v1/current?query=${secondCity}&key=${apiKey}`;

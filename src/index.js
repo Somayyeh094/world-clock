@@ -8,11 +8,11 @@ function showTime() {
   let zone = document.querySelector("#display");
   zone.innerHTML = `<div
           class="row border border-secondary pt-4 rounded-3 m-3" style="background-color: #d5e9f7"
-        ><div class="col-6 text-center ">
+        ><div class="col-md-6 text-center ">
             <h2>${nameTimeZone}</h2>
             <p> ${moment().tz(nameTimeZone).format("MMMM Do, YYYY")}</p>
           </div>
-          <div class=" col-6 text-center time">
+          <div class=" col-md-6 text-center time">
             <h1>
               <span class="fw-bold" > ${moment()
                 .tz(nameTimeZone)

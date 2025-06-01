@@ -3,12 +3,12 @@ function showInfo() {
   let zone = document.querySelector("#display");
   zone.innerHTML = `<div
           class="row show-info border border-secondary pt-5 rounded-3 m-3" style="background-color: #d5e9f7"
-        ><div class="col-6 text-center ">
+        ><div class="col-md-6 text-center ">
             <h3 class="fst-italic"> ${
               searchInput.charAt(0).toUpperCase() + searchInput.slice(1)
             },${country} <br/><span class="fs-5">(${timeZone})</span></h3>
           </div>
-          <div class=" col-6 text-center">
+          <div class=" col-md-6 text-center">
             <h1>
               <span class="fw-bold" > ${moment()
                 .tz(timeZone)
