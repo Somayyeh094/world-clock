@@ -3,20 +3,23 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  
 }
 .main-section {
   background-color: white;
   width: 75%;
   margin: 50px auto;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
 }
 
-/* .search-input {
-  width: 40%;
+.nav-link {
+  margin: 0 80px;
 }
-.btn {
-  width: 15%;
-} */
-
+form label{
+  font-size: 20px;
+}
 .display {
   height: 450px;
   background-image: url("/image/Worldmap.svg");
@@ -26,10 +29,31 @@ body {
   padding-top: 70px;
 }
 
-@media (max-width:960px) {
-  .enter-city h3{
-    font-size: 20px;
 
+footer {
+  margin-top: auto;
+}
+
+@media (max-width: 1280px) {
+  .nav-link {
+    margin: 0 65px;
+  }}
+  @media (max-width: 1024px) {
+    .nav-link {
+      margin: 0 40px;
+    }
+}
+@media (max-width: 960px) {
+  .enter-city h3 {
+    font-size: 16px;
   }
-
+  form label{
+    font-size: 16px;
+  }
+  select{
+    font-size: 14px;
+  }
+  footer{
+    font-size: 12px;
+  }
 }
