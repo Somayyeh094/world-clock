@@ -46,7 +46,9 @@ footer {
 .borders {
   border-right: 2px solid rgb(121, 120, 120);
 }
-
+.show-info-singleCity{
+  margin: 100px;
+}
 
 /* spinner */
 /* Absolute Center Spinner */
@@ -210,6 +212,9 @@ footer {
     width: 75%;
   }
   .show-info-difference {
+    margin: 50px 0;
+  }
+  .show-info-singleCity{
     margin: 50px 0;
   }
 }

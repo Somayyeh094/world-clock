@@ -2,8 +2,8 @@
 function showInfo() {
  
   zone.innerHTML = `<div
-          class="row show-info  border border-secondary  rounded-3 m-5" style="background-color: #d5e9f7"
-        ><div class="col-md-6 borders text-center pt-5 ">
+          class="row show-info-singleCity  border border-secondary  rounded-3 " style="background-color: #d5e9f7"
+        ><div class="col-md-6 borders text-center pt-4 ">
             <h3 class="fst-italic"> ${
               searchInput.charAt(0).toUpperCase() + searchInput.slice(1)
             },${country} <br/><span class="fs-4">(${timeZone})</span></h3>
