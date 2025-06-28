@@ -22,7 +22,8 @@ function showInfo() {
 }
 setInterval(showInfo, 1000);
 function findTimeZone(response) {
-  timeZone = response.data.timeZone;
+  timeZone = response.data.zoneName;
+  console.log(response.data.zoneName);
   showInfo();
 }
 
@@ -33,8 +34,8 @@ function callTimeApi(response) {
     let latitude = response.data.coordinates.latitude;
     let longitude = response.data.coordinates.longitude;
     country = response.data.country;
-  
-    let apiUrl = `https://timeapi.io/api/time/current/coordinate?latitude=${latitude}&longitude=${longitude}`;
+    let apiUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=41JCT95F3RS6&format=json&by=position&lat=${latitude}&lng=${longitude}`;
+    
     axios.get(apiUrl).then(findTimeZone);
   }
 }

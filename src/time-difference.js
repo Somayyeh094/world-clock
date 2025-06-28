@@ -68,11 +68,11 @@ function showInfo() {
 
 setInterval(showInfo, 1000);
 function findTimeZoneFirstCity(response) {
-  timeZoneFirstCity = response.data.timeZone;
+  timeZoneFirstCity = response.data.zoneName;
   showInfo();
 }
 function findTimeZoneSecondCity(response) {
-  timeZoneSecondCity = response.data.timeZone;
+  timeZoneSecondCity = response.data.zoneName;
   showInfo();
 }
 function timeFirstCity(response) {
@@ -80,7 +80,7 @@ function timeFirstCity(response) {
   countryFirstCity = response.data.country;
   let latitudeFirstCity = response.data.coordinates.latitude;
   let longitudeFirstCity = response.data.coordinates.longitude;
-  let apiUrl = `https://timeapi.io/api/time/current/coordinate?latitude=${latitudeFirstCity}&longitude=${longitudeFirstCity}`;
+  let apiUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=41JCT95F3RS6&format=json&by=position&lat=${latitudeFirstCity}&lng=${longitudeFirstCity}`;
   axios.get(apiUrl).then(findTimeZoneFirstCity);
 }
 function timeSecondCity(response) {
@@ -88,7 +88,8 @@ function timeSecondCity(response) {
   countrySecondCity = response.data.country;
   let latitudeSecondCity = response.data.coordinates.latitude;
   let longitudeSecondCity = response.data.coordinates.longitude;
-  let apiUrl = `https://timeapi.io/api/time/current/coordinate?latitude=${latitudeSecondCity}&longitude=${longitudeSecondCity}`;
+  let apiUrl = `http://api.timezonedb.com/v2.1/get-time-zone?key=41JCT95F3RS6&format=json&by=position&lat=${latitudeSecondCity}&lng=${longitudeSecondCity}`;
+
   axios.get(apiUrl).then(findTimeZoneSecondCity);
 }
 
