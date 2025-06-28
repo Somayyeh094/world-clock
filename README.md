@@ -15,9 +15,9 @@ A lightweight vanilla JavaScript application that displays the current time acro
 
 ## Technologies🛠️
 
-- Vanilla JavaScript (ES6)
-- World Time API
-- CSS3 (Flexbox/Grid)
-- Netlify for deployment
+- **Vanilla** JavaScript 
+- **API**: [SheCodes Weather API](https://www.shecodes.io/learn/apis) & [TimeZoneDB API](https://timezonedb.com/api)
+- **CSS3** (Flexbox/Grid)
+- **Deployment**: Netlify 
 
 ## Project Structure
