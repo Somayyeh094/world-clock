@@ -6,14 +6,14 @@ A lightweight vanilla JavaScript application that displays the current time acro
 
 ![App Screenshot](./screenshot.png)
 
-## Features
+## Features✨
 
 - Real-time clock updates
 - Timezone selection dropdown
 - Clean, responsive interface
 - No framework dependencies
 
-## Technologies Used
+## Technologies🛠️
 
 - Vanilla JavaScript (ES6)
 - World Time API
