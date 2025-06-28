@@ -1,23 +1,23 @@
 # World Clock Timezone⏱️🌍🕓
 
-A lightweight vanilla JavaScript application that displays current time across different timezones.
+A lightweight vanilla JavaScript application that displays the current time across different time zones.
 
-[Live Demo](https://worldclock-timezone.netlify.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://worldclock-timezone.netlify.app/)
 
 ![App Screenshot](./screenshot.png)
 
-## Features
+## Features✨
 
 - Real-time clock updates
 - Timezone selection dropdown
 - Clean, responsive interface
 - No framework dependencies
 
-## Technologies Used
+## Technologies🛠️
 
-- Vanilla JavaScript (ES6)
-- World Time API
-- CSS3 (Flexbox/Grid)
-- Netlify for deployment
+- **Vanilla** JavaScript 
+- **API**: [SheCodes Weather API](https://www.shecodes.io/learn/apis) & [TimeZoneDB API](https://timezonedb.com/api)
+- **CSS3** (Flexbox/Grid)
+- **Deployment**: Netlify 
 
 ## Project Structure
