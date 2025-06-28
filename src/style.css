@@ -8,7 +8,7 @@ body {
   background-color: white;
   width: 75%;
   margin: 50px auto;
-  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +25,7 @@ form label {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  /* padding-top: 7px; */
+  
 }
 .grid-city-time {
   display: grid;
@@ -39,6 +39,9 @@ form label {
 
 footer {
   margin-top: auto;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 .show-info-difference {
   margin: 100px;
