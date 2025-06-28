@@ -1,14 +1,14 @@
-// A bit strange, I know! I couldn't find a free API that included both city and timezone. So...
+
 function showInfo() {
-  let zone = document.querySelector("#display");
+ 
   zone.innerHTML = `<div
-          class="row show-info border border-secondary pt-5 rounded-3 m-3" style="background-color: #d5e9f7"
-        ><div class="col-md-6 text-center ">
+          class="row show-info  border border-secondary  rounded-3 m-5" style="background-color: #d5e9f7"
+        ><div class="col-md-6 borders text-center pt-5 ">
             <h3 class="fst-italic"> ${
               searchInput.charAt(0).toUpperCase() + searchInput.slice(1)
-            },${country} <br/><span class="fs-5">(${timeZone})</span></h3>
+            },${country} <br/><span class="fs-4">(${timeZone})</span></h3>
           </div>
-          <div class=" col-md-6 text-center">
+          <div class=" col-md-6 text-center pt-4">
             <h1>
               <span class="fw-bold" > ${moment()
                 .tz(timeZone)
@@ -19,12 +19,13 @@ function showInfo() {
             </h1>
 <p> ${moment().tz(timeZone).format("MMMM Do, YYYY")}</p>
           </div></div>`;
+          zone.classList.remove("loading");
 }
 setInterval(showInfo, 1000);
 function findTimeZone(response) {
   timeZone = response.data.zoneName;
-  console.log(response.data.zoneName);
-  showInfo();
+  showInfo()
+  
 }
 
 function callTimeApi(response) {
@@ -46,10 +47,16 @@ function callWeatherApi(event) {
   let apiKey = "71c9o8ef0370bd39a326b41301fb04bt";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInput}&key=${apiKey}`;
   axios.get(apiUrl).then(callTimeApi);
+  
+    zone.classList.add("loading");
+  
+  
+  
 }
 
 var searchInput = "";
 var country = "";
 var timeZone = "";
 let formSubmit = document.querySelector("#formSubmit");
+var zone = document.querySelector("#display");
 formSubmit.addEventListener("submit", callWeatherApi);

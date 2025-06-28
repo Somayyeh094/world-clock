@@ -1,6 +1,7 @@
 function showInfo() {
   let text = "";
-  zone.innerHTML = "";
+  
+  // zone.innerHTML = "";
   const firstCityTime =
     parseInt(moment().tz(timeZoneFirstCity).format("H") * 60) +
     parseInt(moment().tz(timeZoneFirstCity).format("m")); //in minutes
@@ -32,7 +33,7 @@ function showInfo() {
   if (minutesDiff < 10) {
     minutesDiff = `0${minutesDiff}`;
   }
-
+  zone.classList.remove("loading");
   zone.innerHTML = `<div
             class="row show-info-difference border border-secondary rounded-3 " style="background-color: #d5e9f7"
           ><div class="col-md-6 text-center pt-2 borders">
@@ -103,6 +104,7 @@ function callWeatherApi(event) {
   let apiUrlSecondCity = `https://api.shecodes.io/weather/v1/current?query=${secondCity}&key=${apiKey}`;
   axios.get(apiUrlFirstCity).then(timeFirstCity);
   axios.get(apiUrlSecondCity).then(timeSecondCity);
+  zone.classList.add("loading");
 }
 
 var firstCity = "";
