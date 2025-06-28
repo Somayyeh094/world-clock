@@ -34,8 +34,8 @@ function showInfo() {
   }
 
   zone.innerHTML = `<div
-            class="row show-info border border-secondary rounded-3 m-3" style="background-color: #d5e9f7"
-          ><div class="col-md-6 text-center pt-2 border-dark border-end">
+            class="row show-info-difference border border-secondary rounded-3 " style="background-color: #d5e9f7"
+          ><div class="col-md-6 text-center pt-2 borders">
               <h4 class="fst-italic"> ${firstCity}<small>(${countryFirstCity})</small><br/></h4>
                 <span class=" fs-3 fw-bold" > ${moment()
                   .tz(timeZoneFirstCity)

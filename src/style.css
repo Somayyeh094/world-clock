@@ -3,13 +3,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  
 }
 .main-section {
   background-color: white;
   width: 75%;
   margin: 50px auto;
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -17,7 +16,7 @@ body {
 .nav-link {
   margin: 0 80px;
 }
-form label{
+form label {
   font-size: 20px;
 }
 .display {
@@ -26,34 +25,74 @@ form label{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  padding-top: 70px;
+  /* padding-top: 7px; */
 }
-
+.grid-city-time {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  grid-gap: 10px;
+}
+.city-time-input {
+  width: 50%;
+}
 
 footer {
   margin-top: auto;
+}
+.show-info-difference {
+  margin: 100px;
+}
+.borders {
+  border-right: 2px solid rgb(121, 120, 120);
 }
 
 @media (max-width: 1280px) {
   .nav-link {
     margin: 0 65px;
-  }}
-  @media (max-width: 1024px) {
-    .nav-link {
-      margin: 0 40px;
-    }
+  }
 }
+@media (max-width: 1024px) {
+  .nav-link {
+    margin: 0 40px;
+  }
+}
+
 @media (max-width: 960px) {
   .enter-city h3 {
     font-size: 16px;
   }
-  form label{
+  form label {
     font-size: 16px;
   }
-  select{
+  select {
     font-size: 14px;
   }
-  footer{
+  footer {
     font-size: 12px;
+  }
+  .city-time-input {
+    width: 75%;
+  }
+  .grid-difference {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    grid-gap: 10px;
+  }
+  .label-padding {
+    padding-left: 28px;
+  }
+  .calculate-button {
+    width: 75%;
+  }
+  .show-info-difference {
+    margin: 50px 0;
+  }
+}
+@media (max-width: 740px) {
+  .borders {
+    border-bottom: 2px solid rgb(141, 140, 140);
+    border-right: none;
   }
 }

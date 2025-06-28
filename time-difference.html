@@ -60,6 +60,8 @@
       <div class="enter-cities">
         <h3 class="text-center p-3">What is the difference in time</h3>
         <form action="" class="text-center" id="formSubmit">
+          <div class="grid-difference">
+            <div class="input-difference d-inline">
           <label for="first-city">Between</label>
           <input
             type="search"
@@ -69,7 +71,9 @@
             class="fst-italic text-center rounded-2 border border-secondary bg-light p-1 pb-2"
             autocomplete="off"
           />
-          <label for="second-city">And</label>
+        </div>
+          <div class="input-difference d-inline">
+          <label for="second-city" class="label-padding">And</label>
           <input
             type="search"
             name=""
@@ -78,16 +82,16 @@
             class="fst-italic text-center rounded-2 border border-secondary bg-light p-1 pb-2"
             autocomplete="off"
           />
-
+        </div>
           <input
-            class="btn btn-primary"
             type="submit"
             value="Calculate"
-            class="text-center pt-2"
+            class="btn btn-primary text-center pt-2 input-difference d-inline calculate-button"
           />
+        </div>
         </form>
       </div>
-      <div class="container-fluid display mt-4" id="display"></div>
+      <div class="container-fluid display " id="display"></div>
     </div>
     <footer class="text-center text-white bg-dark p-2">
       This project was coded by
