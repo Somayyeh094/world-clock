@@ -1,8 +1,8 @@
 # World Clock Timezone⏱️🌍🕓
 
-A lightweight vanilla JavaScript application that displays current time across different timezones.
+A lightweight vanilla JavaScript application that displays the current time across different time zones.
 
-[Live Demo](https://worldclock-timezone.netlify.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://worldclock-timezone.netlify.app/)
 
 ![App Screenshot](./screenshot.png)
 
