@@ -19,9 +19,6 @@ A lightweight vanilla JavaScript application that displays the current time acro
 - **CSS3** (Flexbox/Grid)
 - **Deployment**: Netlify 
 ## Screenshots 📱
-![Uploading Screenshot-clock1.png…]()
-
-
 
 ## Credits 🙌  
 - Time data provided by [SheCodes Weather API](https://www.shecodes.io/learn/apis) & [TimeZoneDB API](https://timezonedb.com/api)
