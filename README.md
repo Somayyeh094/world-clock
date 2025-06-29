@@ -14,11 +14,10 @@ A lightweight vanilla JavaScript application that displays the current time acro
 
 ## Technologies🛠️
 
-- **Vanilla** JavaScript 
+- **Vanilla JavaScript**
 - **API**: [SheCodes Weather API](https://www.shecodes.io/learn/apis) & [TimeZoneDB API](https://timezonedb.com/api)
 - **CSS3** (Flexbox/Grid)
 - **Deployment**: Netlify 
-## Screenshots 📱
 
 ## Credits 🙌  
 - Time data provided by [SheCodes Weather API](https://www.shecodes.io/learn/apis) & [TimeZoneDB API](https://timezonedb.com/api)
